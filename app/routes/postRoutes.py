@@ -24,7 +24,9 @@ async def get_single_post(id: int) -> dict:
             return {"data": post}
 
 
-@router.post("/posts", dependencies=[Depends(JWTBearer())], tags=["posts"])
+@router.post(
+    "/posts", dependencies=[Depends(JWTBearer())], tags=["posts"], status_code=201
+)
 async def add_post(post: PostSchema) -> dict:
     post.id = len(posts) + 1
     posts.append(post.dict())
