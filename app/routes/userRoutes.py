@@ -6,7 +6,7 @@ from app.auth.auth_handler import signJWT
 
 router = APIRouter(tags=["user"])
 
-users = []
+users = []  # This imitates a database to store user credentials
 
 
 def check_user(data: UserLoginSchema):
@@ -16,7 +16,7 @@ def check_user(data: UserLoginSchema):
     return False
 
 
-@router.post("/user/signup", tags=["user"])
+@router.post("/user/signup", tags=["user"], status_code=201)
 async def create_user(user: UserSchema = Body(...)):
     users.append(user)  # replace with db call, making sure to hash the password first
     return signJWT(user.email)
