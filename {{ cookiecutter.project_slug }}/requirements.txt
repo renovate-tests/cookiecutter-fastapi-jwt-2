@@ -26,7 +26,7 @@ PyJWT==2.1.0
 pyparsing==2.4.7
 pytest==6.2.3
 python-decouple==3.4
-regex==2020.11.13
+regex==2021.4.4
 requests==2.25.1
 starlette==0.13.6
 toml==0.10.2
