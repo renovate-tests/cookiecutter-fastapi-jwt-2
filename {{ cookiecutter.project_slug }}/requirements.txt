@@ -20,7 +20,7 @@ pathspec==0.8.1
 pluggy==0.13.1
 py==1.10.0
 pycodestyle==2.6.0
-pydantic==1.7.3
+pydantic==1.8.1
 pyflakes==2.2.0
 PyJWT==1.7.1
 pyparsing==2.4.7
